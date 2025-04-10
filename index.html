@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <title>El Mocayd Research group</title>
+  <link rel="stylesheet" href="assets/style.css"> <!-- Linking the external CSS file -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   
@@ -20,14 +21,48 @@
   </header>
 
   <main>
-    <section>
-      <h1>Welcome to My Portfolio!</h1>
-      <p>Explore my work, research, and projects.</p>
+   <!-- Research Areas Section -->
+    <section id="research-areas">
+      <div class="content">
+        <h2>Research Areas</h2>
+        <p>My work spans several important areas within environmental science:</p>
+        <ul>
+          <li><strong>Climate Modeling</strong>: Understanding the impact of climate change on ecosystems.</li>
+          <li><strong>Energy Harvesting</strong>: Developing sustainable solutions for energy production.</li>
+          <li><strong>Agriculture</strong>: Studying climate impacts on food security and crop yields.</li>
+          <li><strong>Reliability Analysis</strong>: Evaluating the resilience of systems under extreme environmental conditions.</li>
+        </ul>
+      </div>
     </section>
+  
+    <!-- Data Visualization Section -->
+    <section id="research-visualization">
+      <div class="content">
+        <h2>Data Visualization</h2>
+        <canvas id="researchChart"></canvas>
+        <script>
+          const ctx = document.getElementById('researchChart').getContext('2d');
+          const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+              datasets: [{
+                label: 'Climate Data',
+                data: [10, 20, 30, 25, 40, 50],
+                borderColor: 'rgba(255, 99, 132, 1)',
+                fill: false
+              }]
+            }
+          });
+        </script>
+      </div>
+    </section>
+
   </main>
   
   <footer>
-    <p>&copy; 2025 Nabil El Mocayd</p>
+    <p>Contact: your_email@example.com | Follow me on <a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+    </div></p>
   </footer>
 </body>
 </html>
