@@ -1,95 +1,70 @@
-/* Reset & base */
-body {
+/* Reset some default styles */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
 
-  background-image: url('image/background.png');
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+  background-image: url('image/background.png'); /* NABIL 10052025 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  color: white;
+  position: relative;
+  min-height: 100vh;
+  line-height: 1.6;
 }
 
-/* Header */
-header {
-  background-color: #004d40;
-  color: white;
-  padding: 1rem 2rem;
+/* Overlay for readability */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Centered main content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
   text-align: center;
+  min-height: 100vh;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
+/* Heading styles */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
-/* Navigation */
-nav {
-  text-align: center;
-  background-color: #00695c;
-  padding: 0.5rem;
+/* Paragraph styles */
+p {
+  max-width: 800px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
-nav a {
-  color: white;
+/* Button */
+a.contact-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2e8b57;
+  color: #fff;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: 500;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-  color: #a7ffeb;
-}
-
-/* Main content */
-main {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* Sections */
-section {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  color: #004d40;
-  border-bottom: 2px solid #0097a7;
-  padding-bottom: 5px;
-}
-
-a {
-  color: #0097a7;
-}
-
-a:hover {
-  color: #006064;
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  background-color: #004d40;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-/* Button styles */
-button, .btn {
-  background-color: #0097a7;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover, .btn:hover {
-  background-color: #006064;
+a.contact-btn:hover {
+  background-color: #246b45;
 }
