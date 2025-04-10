@@ -34,29 +34,7 @@
         </ul>
       </div>
     </section>
-  
-    <!-- Data Visualization Section -->
-    <section id="research-visualization">
-      <div class="content">
-        <h2>Data Visualization</h2>
-        <canvas id="researchChart"></canvas>
-        <script>
-          const ctx = document.getElementById('researchChart').getContext('2d');
-          const chart = new Chart(ctx, {
-            type: 'line',
-            data: {
-              labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-              datasets: [{
-                label: 'Climate Data',
-                data: [10, 20, 30, 25, 40, 50],
-                borderColor: 'rgba(255, 99, 132, 1)',
-                fill: false
-              }]
-            }
-          });
-        </script>
-      </div>
-    </section>
+
 
   </main>
   
