@@ -84,7 +84,9 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
+    flex-direction: row; /* Changed from column to row */
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .container {
@@ -92,6 +94,6 @@ footer {
   }
 
   nav a {
-    margin: 10px 0;
+    margin: 10px;
   }
 }
